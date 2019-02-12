@@ -1,2 +1,3 @@
 # Thaoly-Ngo Personal Website
-* Going under construction *
+
+*Going under construction*

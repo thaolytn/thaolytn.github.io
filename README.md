@@ -1,3 +1,3 @@
-# Thaoly-Ngo Personal Website
+# Thaoly-Ngo's Personal Website
 
 *Going under construction*

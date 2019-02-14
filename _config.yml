@@ -1,0 +1,19 @@
+#Website Settings
+title: Thao-Ly Ngo Website
+description: A personal website used to showcase resume and creative projects.
+keywords: Thaoly,Xpxshre,Jekyll,Github
+url: http://thaolytn.github.io/
+
+#Author
+author: Thao-Ly Ngo
+email: thaoly.ngo@gmail.com
+
+#Build Settings
+markdown: kramdown
+encoding: utf-8
+permalink: pretty
+
+#Social Settings
+social:
+  - title: instagram
+    url: https://instagram.com/xpxshre

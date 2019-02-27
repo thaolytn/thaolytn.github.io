@@ -1,7 +1,23 @@
 * {
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+}
+
+
 
 @font-face {
     font-family: "Signerica Medium";
@@ -42,6 +58,19 @@
     display: none;
 }
 
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.intro p {
+    font-family: "Helvetica Neue";
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+    padding: 150px;
+}
+
 @media only screen and (max-width: 900px) {
     .navigation ul {
         display: none;
@@ -52,10 +81,18 @@
         right: 0;
         display: block;
         position: fixed;
-        color: gainsboro;
+        color: black;
         font-size: 30px;
-        padding-top: 10px;
-        padding-right: 10px;
+        padding-top: 18px;
+        padding-right: 20px;
+    }
+    
+    .hamburger:hover {
+        color: gainsboro;
+    }
+    
+    .intro p {
+        font-size: 20px;
     }
 }
 
@@ -68,15 +105,24 @@ h1 {
     position: fixed;
 }
 
-.intro p {
-    font-family: "Helvetica Neue";
-    font-size: 30px;
-    font-weight: 300;
+
+
+.contact {
     text-align: center;
-    padding: 150px;
+    
+}
+.contact a {
+    font-family: "Helvetica Neue Bold Italic";
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
 }
 
-
+.contact a:hover {
+    text-decoration: line-through;
+}
 
 /* NAVIGATION BAR */
 .navigation ul {
@@ -85,7 +131,8 @@ h1 {
     top: 5;
     right: 0;
     position: fixed;
-    padding-top: 5px;
+    padding-top: 7px;
+    padding-right: 10px;
 }
 
 .navigation li {
@@ -93,9 +140,9 @@ h1 {
 }
 
 .navigation a {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Bold";
     color: gainsboro;
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: none;
     font-size: 20px;
     padding: 13px;
@@ -137,18 +184,19 @@ h1 {
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 30%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
 }
 
 .overlay-content a {
-    font-family: sans-serif;
+    font-family: "Helvetica Bold Oblique";
     color: gainsboro;
     font-size: 30px;
     font-weight: 500;
 }
+
 
 
 
@@ -179,13 +227,6 @@ h1 {
     background-color: white;
 }
 
-
-hr {
-    display: block;
-    border-width: 1px;
-    margin-left: 80px;
-    margin-right: 80px;
-}
 
 .footer {
     font-family: "Helvetica Neue";

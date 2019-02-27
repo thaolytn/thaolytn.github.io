@@ -6,8 +6,8 @@
     {% include head.html %}
     
     <div class="row">
-        <div class="col-4">
-            <h1> {{page.header}} </h1>
+        <div class="col-4 logo">
+            <h1><a href="index.html">{{page.header}}</a></h1>
         </div>
         {% include navigation.html %}
         
@@ -17,7 +17,7 @@
     <body>
         {{content}}
     </body>
-    <hr>
+
     {% include footer.html %}
     
 </html>

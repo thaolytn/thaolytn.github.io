@@ -1,5 +1,9 @@
 * {
-    box-sizing: border-box;  
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #F4F1ED;
 }
 
 /* width */
@@ -69,6 +73,7 @@
     font-weight: 300;
     text-align: center;
     padding: 150px;
+    background-color: #F4F1ED;
 }
 
 @media only screen and (max-width: 900px) {
@@ -98,9 +103,9 @@
 
 
 h1 {
-    font-family: "Helvetica Bold";
+    font-family: "Helvetica";
     font-size: 33px;
-    font-weight: 600;
+    font-weight: bold;
     top: 0;
     position: fixed;
 }
@@ -112,7 +117,9 @@ h1 {
     
 }
 .contact a {
-    font-family: "Helvetica Neue Bold Italic";
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    font-style: italic;
     font-size: 20px;
     text-align: center;
     padding: 5px;
@@ -211,7 +218,7 @@ h1 {
 }
 
 .instalogo {
-    background-color: white;
+    background-color: #F4F1ED;
     padding-top: 30px;
 }
 
@@ -224,7 +231,7 @@ h1 {
 
 .instafeed {
     padding: 80px;
-    background-color: white;
+    background-color: #F4F1ED;
 }
 
 

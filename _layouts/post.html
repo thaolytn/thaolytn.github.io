@@ -1,4 +1,22 @@
 <!doctype html>
-<html>
 
+
+<html lang="en">
+    
+    {% include head.html %}
+    
+    <div class="row">
+        <div class="col-4 logo">
+            <h1><a href="/index.html">{{page.header}}</a></h1>
+        </div>
+        {% include navigation.html %}
+    </div>
+    
+    
+    <body>
+        {{content}}
+    </body>
+
+    {% include footer.html %}
+    
 </html>

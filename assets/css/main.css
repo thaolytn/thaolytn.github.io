@@ -3,26 +3,24 @@
 }
 
 html {
-    background-color: #F4F1ED;
+    background-color: whitesmoke;
 }
 
-/* width */
+/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: black; 
 }
 
 
-
+/* FONT */
 @font-face {
     font-family: "Signerica Medium";
     src: url(/assets/fonts/Signerica_Medium.ttf);
@@ -32,12 +30,9 @@ html {
     font-family: "Futura";
     src: url(/assets/fonts/Futura.ttc);
 }
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
+
+/* COLUMNS & ROWS */
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -56,10 +51,26 @@ html {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 
-.hamburger {
-    display: none;
+/* LOGO */
+.logo h1 {
+    font-family: "Helvetica";
+    font-size: 33px;
+    font-weight: bold;
+    position: fixed;
+    color: black;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        blink-caret .8s step-end infinite;
 }
 
 .logo a {
@@ -67,16 +78,37 @@ html {
     color: black;
 }
 
-.intro p {
-    font-family: "Helvetica Neue";
-    font-size: 25px;
-    font-weight: 300;
-    text-align: center;
-    padding: 150px;
-    background-color: #F4F1ED;
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
-@media only screen and (max-width: 900px) {
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+}
+
+.hamburger {
+    display: none;
+}
+
+
+.intro p {
+    font-family: "Helvetica";
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    padding: 150px;
+
+}
+
+/* RESPONSIVE SETTINGS */
+
+@media only screen and (max-width: 700px) {
+    .column {
+        width: 100%;
+    }
+    
     .navigation ul {
         display: none;
     }
@@ -98,37 +130,15 @@ html {
     
     .intro p {
         font-size: 20px;
+        padding: 110px;
     }
 }
 
-
-h1 {
-    font-family: "Helvetica";
-    font-size: 33px;
-    font-weight: bold;
-    top: 0;
-    position: fixed;
-}
-
-
-
-.contact {
-    text-align: center;
-    
-}
-.contact a {
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    font-style: italic;
-    font-size: 20px;
-    text-align: center;
-    padding: 5px;
-    color: black;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: line-through;
+@media only screen and (max-width: 500px) {
+    .intro p {
+        font-size: 15px;
+        padding: 100px;
+    }
 }
 
 /* NAVIGATION BAR */
@@ -151,7 +161,7 @@ h1 {
     color: gainsboro;
     font-weight: bold;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 13px;
 }
 
@@ -218,8 +228,8 @@ h1 {
   }
 }
 
+/* INSTAGRAM */
 .instalogo {
-    background-color: #F4F1ED;
     padding-top: 30px;
 }
 
@@ -232,10 +242,77 @@ h1 {
 
 .instafeed {
     padding: 80px;
-    background-color: #F4F1ED;
+
 }
 
+/* ENTRIES PAGE */
+.entries {
+    padding-top: 150px;
+}
 
+.cover {
+    display: inline-block;
+    position: relative;
+    padding: 30px;
+}
+
+.cover img {
+    width: 100%;
+    height: auto;
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(245,245,245,0.2);
+}
+
+.cover:hover .cover-overlay {
+    opacity: 1;
+}
+
+.text {
+    color: black;
+    font-size: 30px;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* CONTACT FOOTER */
+.contact {
+    text-align: center;
+    
+}
+.contact a {
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: line-through;
+}
+
+/* FOOTER */
 .footer {
     font-family: "Helvetica Neue";
     font-size: 13px;

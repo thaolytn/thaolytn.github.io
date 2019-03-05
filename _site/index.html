@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    
-    <div class="row">
+
+    <div id="navbar" class="row">
         <div class="col-4 logo">
-            <h1><a href="index.html">Thao-Ly Ngo</a></h1>
+            <h1><a href="/index.html">Thao-Ly Ngo</a></h1>
         </div>
         <div class="col-8 navigation">
     <ul>
@@ -62,16 +62,27 @@
         document.getElementById("dropdown").style.height = "0%";
     }
 </script>
-        
-    </div>
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
     
+    </div>
+
     
     <body>
         <div class="intro">
     <p>
-        I am a software developer & creative born in Vietnam and raised in Southern California. My experiences are powered by a background in Computer Science and passion for all things art and design. <br/>
-        <br/>
-        Driven by the belief in functionality and sustainablity across any multimedia platform, my projects are dedicated to offer new perspectives and to enhance the creative decision-making process.
+        I am a software developer & creative born in Vietnam and raised in Southern California. My experiences are powered by a background in Computer Science and passion for all things art and design. Driven by the belief in functionality and sustainablity across any multimedia platform, my projects are dedicated to offer new perspectives and to enhance the creative decision-making process.
     </p>
 </div>
 

@@ -4,15 +4,14 @@
 <html lang="en">
     
     {% include head.html %}
-    
-    <div class="row">
+
+    <div id="navbar" class="row">
         <div class="col-4 logo">
-            <h1><a href="index.html">{{page.header}}</a></h1>
+            <h1><a href="/index.html">{{page.header}}</a></h1>
         </div>
         {% include navigation.html %}
-        
     </div>
-    
+
     
     <body>
         {{content}}

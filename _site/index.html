@@ -13,21 +13,21 @@
 
     <div id="navbar" class="row">
         <div class="col-4 logo">
-            <h1><a href="/index.html">Thao-Ly Ngo</a></h1>
+            <h1><a href="/index.html">THAO—LY NGO</a></h1>
         </div>
         <div class="col-8 navigation">
     <ul>
         
             <li><a href="/" style="color: black;">
-                // About
+                ABOUT
             </a></li>
         
             <li><a href="/assets/files/resume.pdf" >
-                // Resume
+                RESUME
             </a></li>
         
             <li><a href="/entries/" >
-                // Entries
+                ENTRIES
             </a></li>
         
     </ul>
@@ -39,11 +39,11 @@
     <div class="overlay-content">
         <ul>
             
-            <li><a href="/"> // About</a></li>
+            <li><a href="/"> ABOUT</a></li>
             
-            <li><a href="/assets/files/resume.pdf"> // Resume</a></li>
+            <li><a href="/assets/files/resume.pdf"> RESUME</a></li>
             
-            <li><a href="/entries/"> // Entries</a></li>
+            <li><a href="/entries/"> ENTRIES</a></li>
             
         </ul>
     </div>
@@ -63,18 +63,7 @@
     }
 </script>
 
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-</script>
+
     
     </div>
 
@@ -82,7 +71,7 @@
     <body>
         <div class="intro">
     <p>
-        I am a software developer & creative born in Vietnam and raised in Southern California. My experiences are powered by a background in Computer Science and passion for all things art and design. Driven by the belief in functionality and sustainablity across any multimedia platform, my projects are dedicated to offer new perspectives and to enhance the creative decision-making process.
+        I am a <span style="background-color: yellow">software developer</span> based in Los Angeles. My experiences are powered by a background in Computer Science and passion for all things art and design. Driven by the belief in functionality and sustainablity across any multimedia platform, my projects are dedicated to offer new perspectives and to enhance the creative decision-making process.
     </p>
 </div>
 
@@ -97,10 +86,19 @@
     <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/a9818dcc7e1d5dfe967933374601085e.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 </div>
 
-<div class="contact">
-    <a href="https://github.com/thaolytn"> github </a>
-    <a href="https://www.linkedin.com/in/thaoly-ngo/"> linkedin </a>
-    <a href="mailto:thaoly.ngo@gmail.com" target="_top"> email </a>
+<div id="contact" class="row">
+    <div class="col-4 github">
+        <p class="contact-title"> Github </p>
+        <a href="https://github.com/thaolytn"> <p> github.com/thaolytn </p> </a>
+    </div>
+    <div class="col-4 linkedin">
+        <p class="contact-title"> Linkedin </p>
+        <a href="https://www.linkedin.com/in/thaoly-ngo/"> <p> linkedin.com/in/thaoly-ngo/ </p> </a>
+    </div>
+    <div class="col-4 email">
+        <p class="contact-title"> Email </p>
+        <a href="mailto:thaoly.ngo@gmail.com" target="_top"> <p> thaoly.ngo@gmail.com </p> </a>
+    </div>
 </div>
 
 
@@ -109,8 +107,36 @@
 
     </body>
 
-    <div class="footer">
+    
+<script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var day = today.getDate();
+        var month = today.getMonth();
+        var year = today.getFullYear();
+        
+        h = checkTime(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        
+        document.getElementById('footer').innerHTML = © h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+    }
+    
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        };
+        return i;
+    }
+</script>
+
+<div class="footer">
     <p> © 2019 Thao-Ly Ngo </p>
+    <div id="footer"></div>
 </div>
     
 </html>

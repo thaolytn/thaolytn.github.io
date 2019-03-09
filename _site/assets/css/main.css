@@ -61,12 +61,12 @@ html {
 /* LOGO */
 .logo h1 {
     font-family: "Helvetica";
-    font-size: 33px;
+    font-size: 31px;
     font-weight: bold;
     position: fixed;
     color: black;
     overflow: hidden;
-    border-right: .15em solid black;
+    border-right: .20em solid black;
     white-space: nowrap;
     margin: 0 auto;
     animation:
@@ -94,52 +94,16 @@ html {
 
 
 .intro p {
-    font-family: "Helvetica";
+    font-family: "Helvetica Neue Medium";
     font-size: 25px;
-    font-weight: 500;
-    text-align: center;
-    padding: 150px;
+    text-align: left;
+    padding-left: 82px;
+    padding-right: 82px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 
 }
 
-/* RESPONSIVE SETTINGS */
-
-@media only screen and (max-width: 700px) {
-    .column {
-        width: 100%;
-    }
-    
-    .navigation ul {
-        display: none;
-    }
-    
-    .hamburger {
-        top: 5;
-        right: 0;
-        display: block;
-        position: fixed;
-        color: black;
-        font-size: 30px;
-        padding-top: 18px;
-        padding-right: 20px;
-    }
-    
-    .hamburger:hover {
-        color: gainsboro;
-    }
-    
-    .intro p {
-        font-size: 20px;
-        padding: 110px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .intro p {
-        font-size: 15px;
-        padding: 80px;
-    }
-}
 
 /* NAVIGATION BAR */
 .navigation ul {
@@ -150,6 +114,7 @@ html {
     position: fixed;
     padding-top: 7px;
     padding-right: 10px;
+    transition: top 0.3s;
 }
 
 .navigation li {
@@ -158,15 +123,17 @@ html {
 
 .navigation a {
     font-family: "Helvetica";
-    color: gainsboro;
+    color: black;
     font-weight: bold;
     text-decoration: none;
-    font-size: 25px;
-    padding: 13px;
+    font-size: 21.5px;
+    padding-top: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
 }
 
 .navigation a:hover {
-    color: black;
+    border-bottom: 2px solid #000;
 }
 
 
@@ -211,7 +178,7 @@ html {
     font-family: "Helvetica Neue";
     font-weight: bold;
     color: gainsboro;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: 500;
 }
 
@@ -252,15 +219,21 @@ html {
 
 .cover {
     display: inline-block;
-    position: relative;
-    padding: 30px;
+    /*position: relative;*/
 }
+
 
 .cover img {
-    width: 100%;
+    width: 70%;
     height: auto;
+    margin: auto;
+    display: block;
 }
 
+.cover a:hover {
+    cursor: url('/assets/images/yellow_cursor.png'), auto;
+}
+/*
 .cover-overlay {
     position: absolute;
     top: 0;
@@ -274,50 +247,130 @@ html {
     background-color: rgba(245,245,245,0.2);
 }
 
-.cover:hover .cover-overlay {
+.cover-photo:hover .cover-overlay {
     opacity: 1;
 }
-
-.text {
-    color: black;
-    font-size: 30px;
+*/
+.cover h2 {
     font-family: "Helvetica Neue";
     font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    font-size: 40px;
     text-align: center;
 }
 
-/* CONTACT FOOTER */
-.contact {
+
+#contact {
+    padding-top: 100px;
     text-align: center;
+}
+
+.contact-title {
+    font-family: "Helvetica Neue Bold";
+    font-size: 22px;
+    color: black;
+}
+
+#contact a {
+    text-decoration: none;
+    font-family: "Helvetica Neue Medium";
+    font-size: 17px;
+    color: black;
     
 }
-.contact a {
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    font-style: italic;
-    font-size: 20px;
-    text-align: center;
-    padding: 5px;
-    color: black;
-    text-decoration: none;
+
+#contact .github {
+    padding-left: 75px;
 }
 
-.contact a:hover {
-    text-decoration: line-through;
+
+#contact .email {
+    padding-right: 75px;
 }
+
 
 /* FOOTER */
 .footer {
     font-family: "Helvetica Neue";
     font-size: 13px;
-    font-weight: 300;
+    font-weight: medium;
     color: black;
     text-align: center;
-    padding: 30px;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* RESPONSIVE SETTINGS */
+
+@media only screen and (max-width: 700px) {
+    .column {
+        width: 100%;
+    }
+    
+    .navigation ul {
+        display: none;
+    }
+    
+    .hamburger {
+        top: 5;
+        right: 0;
+        display: block;
+        position: fixed;
+        color: black;
+        font-size: 30px;
+        padding-top: 18px;
+        padding-right: 20px;
+    }
+    
+    .hamburger:hover {
+        color: gainsboro;
+    }
+    
+    .intro p {
+        font-size: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+    
+    
+    .contact-title {
+        font-size: 20px;
+    }
+
+    #contact a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .intro p {
+        font-size: 15px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    #contact .github {
+        padding-left: 40px;
+    }
+
+
+    #contact .email {
+        padding-right: 40px;
+    }
+
+    .contact-title {
+        font-size: 17px;
+    }
+
+    #contact a {
+        font-size: 12px;
+    }
+    
+    
 }

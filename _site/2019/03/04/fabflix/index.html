@@ -19,15 +19,15 @@
     <ul>
         
             <li><a href="/" >
-                // About
+                ABOUT
             </a></li>
         
             <li><a href="/assets/files/resume.pdf" >
-                // Resume
+                RESUME
             </a></li>
         
             <li><a href="/entries/" >
-                // Entries
+                ENTRIES
             </a></li>
         
     </ul>
@@ -39,11 +39,11 @@
     <div class="overlay-content">
         <ul>
             
-            <li><a href="/"> // About</a></li>
+            <li><a href="/"> ABOUT</a></li>
             
-            <li><a href="/assets/files/resume.pdf"> // Resume</a></li>
+            <li><a href="/assets/files/resume.pdf"> RESUME</a></li>
             
-            <li><a href="/entries/"> // Entries</a></li>
+            <li><a href="/entries/"> ENTRIES</a></li>
             
         </ul>
     </div>
@@ -63,18 +63,7 @@
     }
 </script>
 
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-</script>
+
     
     </div>
     
@@ -87,8 +76,36 @@
 
     </body>
 
-    <div class="footer">
+    
+<script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var day = today.getDate();
+        var month = today.getMonth();
+        var year = today.getFullYear();
+        
+        h = checkTime(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        
+        document.getElementById('footer').innerHTML = © h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+    }
+    
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        };
+        return i;
+    }
+</script>
+
+<div class="footer">
     <p> © 2019 Thao-Ly Ngo </p>
+    <div id="footer"></div>
 </div>
     
 </html>

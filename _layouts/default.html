@@ -6,17 +6,32 @@
     {% include head.html %}
 
     <div id="navbar" class="row">
-        <div class="col-4 logo">
+        <div class="col-7 logo">
             <h1><a href="/index.html">{{page.header}}</a></h1>
         </div>
         {% include navigation.html %}
     </div>
 
-    
+
     <body>
         {{content}}
     </body>
+    
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+    </script>
 
     {% include footer.html %}
+
+
     
 </html>

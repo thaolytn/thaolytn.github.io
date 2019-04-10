@@ -1,6 +1,4 @@
-- name: ABOUT
+- name: WORK
   link: /
 - name: RESUME
   link: /assets/files/resume.pdf
-- name: ENTRIES
-  link: /entries/

@@ -12,22 +12,18 @@
 </head>
 
     <div id="navbar" class="row">
-        <div class="col-4 logo">
+        <div class="col-7 logo">
             <h1><a href="/index.html">THAO—LY NGO</a></h1>
         </div>
-        <div class="col-8 navigation">
+        <div class="col-5 navigation">
     <ul>
         
             <li><a href="/" style="color: black;">
-                ABOUT
+                WORK
             </a></li>
         
             <li><a href="/assets/files/resume.pdf" >
                 RESUME
-            </a></li>
-        
-            <li><a href="/entries/" >
-                ENTRIES
             </a></li>
         
     </ul>
@@ -39,11 +35,9 @@
     <div class="overlay-content">
         <ul>
             
-            <li><a href="/"> ABOUT</a></li>
+            <li><a href="/"> WORK</a></li>
             
             <li><a href="/assets/files/resume.pdf"> RESUME</a></li>
-            
-            <li><a href="/entries/"> ENTRIES</a></li>
             
         </ul>
     </div>
@@ -67,15 +61,59 @@
     
     </div>
 
-    
+
     <body>
-        <div class="intro">
+        <div class="animate-zero intro">
     <p>
-        I am a <span style="background-color: yellow">software developer</span> based in Los Angeles. My experiences are powered by a background in Computer Science and passion for all things art and design. Driven by the belief in functionality and sustainablity across any multimedia platform, my projects are dedicated to offer new perspectives and to enhance the creative decision-making process.
+        I am a <span style="background-color: yellow">software developer &amp; creative</span> based in Los Angeles. My experiences are powered by a background in Computer Science and passion for all things art and design. Driven by the belief in functionality and sustainablity across any multimedia platform, my projects are dedicated to offer new perspectives and to enhance the creative decision-making process.
     </p>
 </div>
 
 
+<div class="entries row">
+    <div class="animate-first cover stagger-left-col">
+        <a href="/2019/03/04/fabflix/">
+            <p> <span style="font-weight: bold;"> 01. Fabflix </span> — 03.14.2019 </p> 
+        </a>
+        <a href="/2019/03/04/fabflix/">
+            <img class="cover-photo" src="/assets/images/fabflix_cover.jpg">
+        </a>
+    </div>
+    
+    <div class="animate-first cover stagger-right-col">
+        <a href="/2019/03/04/fabflix/">
+            <img class="cover-photo" src="/assets/images/yellow_cover.jpg">
+        </a>
+        <a href="/2019/03/04/fabflix/">
+            <p> <span style="font-weight: bold;"> 02. Yellow </span> — 04.01.2019 </p>
+        </a>
+    </div>
+    
+</div>
+
+<div class="entries row">
+    <div class="animate-first cover stagger-left-col">
+        <a href="/2019/03/04/fabflix/">
+            <img class="cover-photo" src="/assets/images/blue_cover.jpg">
+        </a>
+        <a href="/2019/03/04/fabflix/">
+            <p> <span style="font-weight: bold;"> 03. Blue </span> — 04.09.2019 </p>
+        </a>
+    </div>
+    
+    <div class="animate-first cover stagger-right-col">
+        <a href="/2019/03/04/fabflix/">
+            <img class="cover-photo" src="/assets/images/red_cover.jpg">
+        </a>
+        <a href="/2019/03/04/fabflix/">
+            <p> <span style="font-weight: bold;"> 02. Red </span> — 04.10.2019 </p>
+        </a>
+    </div>
+    
+</div>
+
+
+<!--
 <div class="instalogo">
         <a href="http://instagram.com/xpxshre">
         <img src="/assets/images/ig_logo.png" width="23" height="23">
@@ -85,58 +123,41 @@
 <div class="instafeed">
     <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/a9818dcc7e1d5dfe967933374601085e.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 </div>
+-->
+
 
 <div id="contact" class="row">
-    <div class="col-4 github">
-        <p class="contact-title"> Github </p>
-        <a href="https://github.com/thaolytn"> <p> github.com/thaolytn </p> </a>
-    </div>
-    <div class="col-4 linkedin">
-        <p class="contact-title"> Linkedin </p>
-        <a href="https://www.linkedin.com/in/thaoly-ngo/"> <p> linkedin.com/in/thaoly-ngo/ </p> </a>
-    </div>
-    <div class="col-4 email">
-        <p class="contact-title"> Email </p>
-        <a href="mailto:thaoly.ngo@gmail.com" target="_top"> <p> thaoly.ngo@gmail.com </p> </a>
-    </div>
+    <pre class="contact-title">
+        <a href="https://github.com/thaolytn"> Github </a><a href="https://www.linkedin.com/in/thaoly-ngo/"> Linkedin </a><a href="https://www.instagram.com/xpxshre/"> Instagram </a>
+    </pre>
 </div>
+
+
 
 
 
 
 
     </body>
-
     
-<script>
-    function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        var day = today.getDate();
-        var month = today.getMonth();
-        var year = today.getFullYear();
-        
-        h = checkTime(h);
-        m = checkTime(m);
-        s = checkTime(s);
-        
-        document.getElementById('footer').innerHTML = © h + ":" + m + ":" + s;
-        var t = setTimeout(startTime, 500);
-    }
-    
-    function checkTime(i) {
-        if (i < 10) {
-            i = "0" + i
-        };
-        return i;
-    }
-</script>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+    </script>
 
-<div class="footer">
+    <div class="footer">
     <p> © 2019 Thao-Ly Ngo </p>
     <div id="footer"></div>
 </div>
+
+
     
 </html>

@@ -6,6 +6,9 @@ html {
     background-color: whitesmoke;
 }
 
+
+
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
@@ -30,6 +33,11 @@ html {
     font-family: "Futura";
     src: url(/assets/fonts/Futura.ttc);
 }
+
+
+
+
+
 
 
 /* COLUMNS & ROWS */
@@ -58,19 +66,23 @@ html {
 }
 
 
+
+
+
+
+
 /* LOGO */
 .logo h1 {
     font-family: "Helvetica";
     font-size: 31px;
     font-weight: bold;
-    position: fixed;
+    /*position: fixed;*/
     color: black;
     overflow: hidden;
-    border-right: .20em solid black;
+    z-index: 10;
     white-space: nowrap;
     margin: 0 auto;
-    animation:
-        blink-caret .8s step-end infinite;
+
 }
 
 .logo a {
@@ -78,15 +90,6 @@ html {
     color: black;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
-}
 
 .hamburger {
     display: none;
@@ -99,22 +102,35 @@ html {
     text-align: left;
     padding-left: 82px;
     padding-right: 82px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 
+
+
+
+
+
 /* NAVIGATION BAR */
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.5s;
+    z-index: 99999;
+}
+
 .navigation ul {
     list-style: none;
     margin: 0;
     top: 5;
     right: 0;
-    position: fixed;
+    float: right;
+    /*position: fixed;*/
     padding-top: 7px;
-    padding-right: 10px;
     transition: top 0.3s;
+    z-index: 10;
 }
 
 .navigation li {
@@ -133,8 +149,13 @@ html {
 }
 
 .navigation a:hover {
-    border-bottom: 2px solid #000;
+    color: dimgray;
 }
+
+
+
+
+
 
 
 /* HAMBURGER NAVIGATION */
@@ -156,7 +177,7 @@ html {
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: white;
+    color: dimgray;
 }
 
 .overlay .closebtn {
@@ -178,11 +199,9 @@ html {
     font-family: "Helvetica Neue";
     font-weight: bold;
     color: gainsboro;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 500;
 }
-
-
 
 
 @media screen and (max-height: 450px) {
@@ -194,6 +213,9 @@ html {
         right: 35px;
   }
 }
+
+
+
 
 /* INSTAGRAM */
 .instalogo {
@@ -208,84 +230,101 @@ html {
 
 
 .instafeed {
-    padding: 80px;
+    padding: 130px;
 
 }
 
-/* ENTRIES PAGE */
+
+
+
+
+/* ENTRIES */
+.stagger-left-col {
+    width: 50%;
+    float: left;
+
+}
+
+.stagger-right-col {
+    width: 50%;
+    float: left;
+    padding-top: 100px;
+}
+
+
 .entries {
-    padding-top: 150px;
+    padding-bottom: 100px;
+    padding-left: 23px;
 }
 
 .cover {
-    display: inline-block;
-    /*position: relative;*/
+    position: relative;
+    text-align: center;
 }
-
 
 .cover img {
     width: 70%;
-    height: auto;
     margin: auto;
-    display: block;
-}
-
-.cover a:hover {
-    cursor: url('/assets/images/yellow_cursor.png'), auto;
-}
-/*
-.cover-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(245,245,245,0.2);
-}
-
-.cover-photo:hover .cover-overlay {
-    opacity: 1;
-}
-*/
-.cover h2 {
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    font-size: 40px;
-    text-align: center;
+    display: inline;
 }
 
 
-#contact {
-    padding-top: 100px;
-    text-align: center;
-}
-
-.contact-title {
-    font-family: "Helvetica Neue Bold";
-    font-size: 22px;
-    color: black;
-}
-
-#contact a {
+.cover a {
     text-decoration: none;
-    font-family: "Helvetica Neue Medium";
-    font-size: 17px;
+}
+
+.stagger-left-col p {
+    font-family: "Helvetica Neue Light";
+    font-size: 30px;
     color: black;
-    
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    padding-top: 25px;
 }
 
-#contact .github {
-    padding-left: 75px;
+.stagger-right-col p {
+    font-family: "Helvetica Neue Light";
+    font-size: 30px;
+    color: black;
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    padding-top: 120px;
+}
+
+.cover p:hover {
+    color: dimgrey;
 }
 
 
-#contact .email {
-    padding-right: 75px;
+
+
+
+
+
+/* CONTACT FOOTER */
+#contact {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 60px;
+    padding-top: 50px;
 }
+
+
+.contact-title a {
+    text-decoration: none;
+    font-family: "Helvetica Neue Bold";
+    font-size: 20px;
+    color: black;
+}
+
+
+
+
+
 
 
 /* FOOTER */
@@ -295,14 +334,212 @@ html {
     font-weight: medium;
     color: black;
     text-align: center;
-    padding-top: 100px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
 }
 
 
+
+
+
+
+
+/* CSS FOR ENTRY */
+
+
+.post-title {
+    text-align: center;
+    font-family: "Helvetica Neue Bold";
+    font-weight: 400;
+    font-size: 40px;
+    color: black;
+}
+
+.post-content-left p {
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.post-content-right p {
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    text-align: left;
+    padding-right: 100px;
+}
+
+.post-content p {
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    text-align: left;
+    padding-left: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATE ON-LOAD */
+
+
+.intro, .cover, .post-title, .post-cover, .post-content-left, .post-content-right, .post-content {
+  opacity: 0;
+  -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    -moz-animation: reveal 1s ease-in 1 normal forwards;
+    -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-zero {
+  -webkit-animation-delay: 500ms;
+     -moz-animation-delay: 500ms;
+       -o-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.animate-first {
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animate-second {
+  -webkit-animation-delay: 2s;
+     -moz-animation-delay: 2s;
+       -o-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.animate-third {
+  -webkit-animation-delay: 3s;
+     -moz-animation-delay: 3s;
+       -o-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-moz-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-o-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+
+
+
+
 /* RESPONSIVE SETTINGS */
+@media only screen and (max-width: 1060px) {
+    .stagger-left-col {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .stagger-right-col {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .stagger-right-col p {
+        left: 140px;
+    }
+    
+    .stagger-left-col p {
+        left: 140px;
+    }
+    
+    .cover img {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .stagger-right-col p {
+        font: 25px;
+        left: 110px;
+    }
+    
+    .stagger-left-col p {
+        font: 25px;
+        left: 110px;
+    }
+}
+
 
 @media only screen and (max-width: 700px) {
     .column {
@@ -325,7 +562,7 @@ html {
     }
     
     .hamburger:hover {
-        color: gainsboro;
+        color: dimgrey;
     }
     
     .intro p {
@@ -336,13 +573,32 @@ html {
         padding-bottom: 110px;
     }
     
-    
-    .contact-title {
-        font-size: 20px;
+    .contact-title a {
+        font-size: 17.5px;
     }
+    
+    .stagger-right-col p {
+        font: 20px;
+        left: 70px;
+    }
+    
+    .stagger-left-col p {
+        font: 20px;
+        left: 70px;
+    }
+    
 
-    #contact a {
-        font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+    .stagger-right-col p {
+        font-size: 20px;
+        left: 50px;
+    }
+    
+    .stagger-left-col p {
+        font-size: 20px;
+        left: 50px;
     }
 }
 
@@ -351,25 +607,22 @@ html {
         font-size: 15px;
         padding-left: 60px;
         padding-right: 60px;
-        padding-top: 50px;
+        padding-top: 100px;
         padding-bottom: 50px;
     }
     
-    #contact .github {
-        padding-left: 40px;
+    .contact-title a {
+        font-size: 15px;
     }
 
-
-    #contact .email {
-        padding-right: 40px;
+    .stagger-right-col p {
+        font-size: 20px;
+        left: 40px;
     }
-
-    .contact-title {
-        font-size: 17px;
-    }
-
-    #contact a {
-        font-size: 12px;
+    
+    .stagger-left-col p {
+        font-size: 20px;
+        left: 40px;
     }
     
     

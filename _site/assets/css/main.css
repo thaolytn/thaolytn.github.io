@@ -74,7 +74,7 @@ html {
 /* LOGO */
 .logo h1 {
     font-family: "Helvetica";
-    font-size: 31px;
+    font-size: 28px;
     font-weight: bold;
     /*position: fixed;*/
     color: black;
@@ -98,10 +98,10 @@ html {
 
 .intro p {
     font-family: "Helvetica Neue Medium";
-    font-size: 25px;
+    font-size: 21.5px;
     text-align: left;
-    padding-left: 82px;
-    padding-right: 82px;
+    padding-left: 85px;
+    padding-right: 85px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -142,7 +142,7 @@ html {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-size: 21.5px;
+    font-size: 18px;
     padding-top: 15px;
     padding-left: 13px;
     padding-right: 13px;
@@ -217,6 +217,8 @@ html {
 
 
 
+
+
 /* INSTAGRAM */
 .instalogo {
     padding-top: 30px;
@@ -238,7 +240,7 @@ html {
 
 
 
-/* ENTRIES */
+/* ENTRIES SECTION */
 .stagger-left-col {
     width: 50%;
     float: left;
@@ -275,22 +277,22 @@ html {
 
 .stagger-left-col p {
     font-family: "Helvetica Neue Light";
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     writing-mode: vertical-lr;
     position: absolute;
-    left: 20px;
+    left: 22px;
     top: 0;
     padding-top: 25px;
 }
 
 .stagger-right-col p {
     font-family: "Helvetica Neue Light";
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     writing-mode: vertical-lr;
     position: absolute;
-    left: 20px;
+    left: 22px;
     top: 0;
     padding-top: 120px;
 }
@@ -309,7 +311,7 @@ html {
 #contact {
     text-align: center;
     padding-left: 5px;
-    padding-right: 60px;
+    padding-right: 65px;
     padding-top: 50px;
 }
 
@@ -317,7 +319,7 @@ html {
 .contact-title a {
     text-decoration: none;
     font-family: "Helvetica Neue Bold";
-    font-size: 20px;
+    font-size: 15px;
     color: black;
 }
 
@@ -334,9 +336,10 @@ html {
     font-weight: medium;
     color: black;
     text-align: center;
+    margin-top: 0;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
 }
 
 
@@ -345,12 +348,13 @@ html {
 
 
 
-/* CSS FOR ENTRY */
+/* CSS FOR ENTRY PAGE*/
 
 
 .post-title {
     text-align: center;
-    font-family: "Helvetica Neue Bold";
+    font-family: "Helvetica Neue Medium";
+    padding-bottom: 100px;
     font-weight: 400;
     font-size: 40px;
     color: black;
@@ -384,7 +388,89 @@ html {
 
 
 
+/* CSS FOR CONTACT PAGE */
+.contact-intro {
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 130px;
+}
 
+.contact-form {
+    max-width: 420px;
+    margin: 50px auto;
+    
+}
+
+.contact-input {
+    color: black;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    line-height: 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+[type="submit"] {
+    font-family: "Helvetica Neue";
+    width: 50%;
+    background: transparent;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+[type="submit"]:hover {
+    background: black;
+    color: whitesmoke;
+}
+
+.send-button {
+    text-align: center;
+}
+
+
+
+
+
+
+/* FIXED BANNER */
+.banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.banner p {
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    color: white;
+    
+}
 
 
 
@@ -397,9 +483,9 @@ html {
 .intro, .cover, .post-title, .post-cover, .post-content-left, .post-content-right, .post-content {
   opacity: 0;
   -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-    -moz-animation: reveal 1s ease-in 1 normal forwards;
-    -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-    animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+                        -moz-animation: reveal 1s ease-in 1 normal forwards;
+        -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+            animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
 }
 
 .animate-zero {
@@ -502,7 +588,12 @@ html {
 
 
 
+
+
+
 /* RESPONSIVE SETTINGS */
+
+
 @media only screen and (max-width: 1060px) {
     .stagger-left-col {
         width: 100%;
@@ -525,6 +616,25 @@ html {
     .cover img {
         width: 50%;
     }
+    
+    .navigation ul {
+        display: none;
+    }
+    
+    .hamburger {
+        top: 5;
+        right: 0;
+        display: block;
+        position: fixed;
+        color: black;
+        font-size: 30px;
+        padding-top: 18px;
+        padding-right: 20px;
+    }
+    
+    .hamburger:hover {
+        color: dimgrey;
+    }
 
 }
 
@@ -545,25 +655,7 @@ html {
     .column {
         width: 100%;
     }
-    
-    .navigation ul {
-        display: none;
-    }
-    
-    .hamburger {
-        top: 5;
-        right: 0;
-        display: block;
-        position: fixed;
-        color: black;
-        font-size: 30px;
-        padding-top: 18px;
-        padding-right: 20px;
-    }
-    
-    .hamburger:hover {
-        color: dimgrey;
-    }
+
     
     .intro p {
         font-size: 20px;
@@ -616,13 +708,13 @@ html {
     }
 
     .stagger-right-col p {
-        font-size: 20px;
-        left: 40px;
+        font-size: 17px;
+        left: 45px;
     }
     
     .stagger-left-col p {
-        font-size: 20px;
-        left: 40px;
+        font-size: 17px;
+        left: 45px;
     }
     
     

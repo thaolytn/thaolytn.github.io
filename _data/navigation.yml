@@ -2,3 +2,5 @@
   link: /
 - name: RESUME
   link: /assets/files/resume.pdf
+- name: CONTACT
+  link: /contact/

@@ -739,5 +739,11 @@ textarea {
         font-size: 20px;
         left: 60px;
     }  
+    
+    .banner p {
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
 }

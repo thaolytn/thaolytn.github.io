@@ -342,7 +342,7 @@ html {
     bottom: 0;
     height: 40px;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: black;
 }
 

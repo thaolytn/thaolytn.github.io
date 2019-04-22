@@ -1,13 +1,22 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+
 
 html {
-    background-color: whitesmoke;
+    background-color: #faf7f7;
 }
 
 
-
+.about-page {
+    background-image: url(/assets/images/lynn_animoji.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% auto;
+}
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
@@ -25,16 +34,14 @@ html {
 
 /* FONT */
 @font-face {
-    font-family: "Signerica Medium";
-    src: url(/assets/fonts/Signerica_Medium.ttf);
+    font-family: "Folio Medium";
+    src: url(/assets/fonts/Folio_Medium.otf);
 }
 
 @font-face {
-    font-family: "Futura";
-    src: url(/assets/fonts/Futura.ttc);
+    font-family: "Folio Light";
+    src: url(/assets/fonts/Folio_Light.otf);
 }
-
-
 
 
 
@@ -73,8 +80,8 @@ html {
 
 /* LOGO */
 .logo h1 {
-    font-family: "Helvetica";
-    font-size: 28px;
+    font-family: "Folio Medium";
+    font-size: 32px;
     font-weight: bold;
     /*position: fixed;*/
     color: black;
@@ -97,13 +104,14 @@ html {
 
 
 .intro p {
-    font-family: "Helvetica Neue Medium";
-    font-size: 21.5px;
+    font-family: "Folio Medium";
+    font-size: 33px;
     text-align: left;
-    padding-left: 85px;
-    padding-right: 85px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 170px;
+    padding-bottom: 0px;
+    
 }
 
 
@@ -138,19 +146,16 @@ html {
 }
 
 .navigation a {
-    font-family: "Helvetica";
+    font-family: "Folio Medium";
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-size: 18px;
-    padding-top: 15px;
+    font-size: 25px;
+    padding-top: 18px;
     padding-left: 13px;
     padding-right: 13px;
 }
 
-.navigation a:hover {
-    color: dimgray;
-}
 
 
 
@@ -176,15 +181,11 @@ html {
     text-decoration: none;
 }
 
-.overlay a:hover, .overlay a:focus {
-    color: dimgray;
-}
-
 .overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .overlay-content {
@@ -196,7 +197,7 @@ html {
 }
 
 .overlay-content a {
-    font-family: "Helvetica Neue";
+    font-family: "Folio Medium";
     font-weight: bold;
     color: gainsboro;
     font-size: 25px;
@@ -253,7 +254,6 @@ html {
     padding-top: 100px;
 }
 
-
 .entries {
     padding-bottom: 100px;
     padding-left: 23px;
@@ -270,13 +270,12 @@ html {
     display: inline;
 }
 
-
 .cover a {
     text-decoration: none;
 }
 
 .stagger-left-col p {
-    font-family: "Helvetica Neue Light";
+    font-family: "Folio Medium";
     font-size: 25px;
     color: black;
     writing-mode: vertical-lr;
@@ -287,7 +286,7 @@ html {
 }
 
 .stagger-right-col p {
-    font-family: "Helvetica Neue Light";
+    font-family: "Folio Medium";
     font-size: 25px;
     color: black;
     writing-mode: vertical-lr;
@@ -295,10 +294,6 @@ html {
     left: 22px;
     top: 0;
     padding-top: 120px;
-}
-
-.cover p:hover {
-    color: dimgrey;
 }
 
 
@@ -312,14 +307,15 @@ html {
     text-align: center;
     padding-left: 5px;
     padding-right: 65px;
-    padding-top: 50px;
+    padding-top: 150px;
+    
 }
 
 
 .contact-title a {
     text-decoration: none;
-    font-family: "Helvetica Neue Bold";
-    font-size: 15px;
+    font-family: "Folio Medium";
+    font-size: 20px;
     color: black;
 }
 
@@ -331,17 +327,34 @@ html {
 
 /* FOOTER */
 .footer {
-    font-family: "Helvetica Neue";
-    font-size: 13px;
+    font-family: "Folio Medium";
+    font-size: 15px;
     font-weight: medium;
     color: black;
     text-align: center;
-    margin-top: 0;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 70px;
+
 }
 
+
+/* FIXED BANNER */
+.banner {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.banner p {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Folio Light";
+    font-size: 15px;
+    color: white;
+    
+}
 
 
 
@@ -349,37 +362,39 @@ html {
 
 
 /* CSS FOR ENTRY PAGE*/
-
-
 .post-title {
     text-align: center;
-    font-family: "Helvetica Neue Medium";
-    padding-bottom: 100px;
-    font-weight: 400;
-    font-size: 40px;
+    font-family: "Folio Medium";
+    padding-top: 50px;
+    font-size: 30px;
     color: black;
 }
 
 .post-content-left p {
-    font-family: "Helvetica Neue";
+    font-family: "Folio Light";
     font-size: 20px;
     text-align: left;
     padding-left: 100px;
 }
 
 .post-content-right p {
-    font-family: "Helvetica Neue";
+    font-family: "Folio Light";
     font-size: 20px;
     text-align: left;
     padding-right: 100px;
 }
 
 .post-content p {
-    font-family: "Helvetica Neue";
+    font-family: "Folio Light";
     font-size: 20px;
     text-align: left;
     padding-left: 100px;
     padding-bottom: 100px;
+}
+
+.image-caption {
+    font-family: "Folio Light";
+    font-size: 13px;
 }
 
 
@@ -390,12 +405,17 @@ html {
 
 /* CSS FOR CONTACT PAGE */
 .contact-intro {
-    font-family: "Helvetica Neue";
-    font-size: 15px;
+    font-family: "Folio Medium";
+    font-size: 20px;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 70px;
     padding-left: 150px;
     padding-right: 130px;
+}
+
+.contact-intro p {
+    padding-top: 50px;
+    
 }
 
 .contact-form {
@@ -406,7 +426,7 @@ html {
 
 .contact-input {
     color: black;
-    font-family: "Helvetica Neue";
+    font-family: "Folio Medium";
     font-size: 15px;
     line-height: 20px;
     background-color: transparent;
@@ -426,17 +446,17 @@ textarea {
 }
 
 [type="submit"] {
-    font-family: "Helvetica Neue";
+    font-family: "Folio Medium";
     width: 50%;
     background: transparent;
     color: black;
     border: 2px solid black;
     cursor: pointer;
     font-size: 17px;
-    padding-top: 10px;
+    padding-top: 13px;
     padding-bottom: 10px;
     transition: all 0.3s;
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -455,32 +475,12 @@ textarea {
 
 
 
-/* FIXED BANNER */
-.banner {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: black;
-}
-
-.banner p {
-    text-align: center;
-    font-family: "Helvetica Neue";
-    font-size: 15px;
-    color: white;
-    
-}
-
-
-
-
 
 
 /* ANIMATE ON-LOAD */
 
-
-.intro, .cover, .post-title, .post-cover, .post-content-left, .post-content-right, .post-content {
+/*
+.intro, .cover, .post-title, .post-image, .image-caption, .post-content-left, .post-content-right, .post-content {
   opacity: 0;
   -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
                         -moz-animation: reveal 1s ease-in 1 normal forwards;
@@ -583,7 +583,7 @@ textarea {
             transform: translateY(0);
   }
 }
-
+*/
 
 
 
@@ -595,6 +595,9 @@ textarea {
 
 
 @media only screen and (max-width: 1060px) {
+    .intro p {
+        font-size: 30px;
+    }
     .stagger-left-col {
         width: 100%;
         height: 50%;
@@ -627,18 +630,19 @@ textarea {
         display: block;
         position: fixed;
         color: black;
-        font-size: 30px;
-        padding-top: 18px;
+        font-size: 25px;
+        padding-top: 15px;
         padding-right: 20px;
     }
-    
-    .hamburger:hover {
-        color: dimgrey;
-    }
-
 }
 
+
 @media only screen and (max-width: 900px) {
+    .intro p {
+        font-size: 28px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
     .stagger-right-col p {
         font: 25px;
         left: 110px;
@@ -656,13 +660,11 @@ textarea {
         width: 100%;
     }
 
-    
     .intro p {
-        font-size: 20px;
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 110px;
-        padding-bottom: 110px;
+        font-size: 28px;
+        padding-left: 50px;
+        padding-right: 50px;
+
     }
     
     .contact-title a {
@@ -678,11 +680,16 @@ textarea {
         font: 20px;
         left: 70px;
     }
-    
-
 }
+
 
 @media only screen and (max-width: 600px) {
+    .intro p {
+        font-size: 23px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+    }
     .stagger-right-col p {
         font-size: 20px;
         left: 50px;
@@ -694,28 +701,21 @@ textarea {
     }
 }
 
+
 @media only screen and (max-width: 500px) {
-    .intro p {
-        font-size: 15px;
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 100px;
-        padding-bottom: 50px;
-    }
+
     
     .contact-title a {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .stagger-right-col p {
-        font-size: 17px;
-        left: 45px;
+        font-size: 20px;
+        left: 60px;
     }
     
     .stagger-left-col p {
-        font-size: 17px;
-        left: 45px;
-    }
-    
-    
+        font-size: 20px;
+        left: 60px;
+    }  
 }

@@ -405,15 +405,15 @@ html {
 
 /* CSS FOR CONTACT PAGE */
 .contact-intro {
-    font-family: "Folio Medium";
-    font-size: 20px;
     text-align: center;
     padding-top: 70px;
     padding-left: 150px;
-    padding-right: 130px;
+    padding-right: 150px;
 }
 
 .contact-intro p {
+    font-family: "Folio Medium";
+    font-size: 20px;
     padding-top: 50px;
     
 }
@@ -595,6 +595,10 @@ textarea {
 
 
 @media only screen and (max-width: 1060px) {
+    .contact-intro {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
     .intro p {
         font-size: 30px;
     }
@@ -643,6 +647,12 @@ textarea {
         padding-left: 100px;
         padding-right: 100px;
     }
+    
+    .contact-intro {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
     .stagger-right-col p {
         font: 25px;
         left: 110px;
@@ -660,6 +670,14 @@ textarea {
         width: 100%;
     }
 
+    .contact-intro {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .contact-intro p {
+        font-size: 17px;
+    }
     .intro p {
         font-size: 28px;
         padding-left: 50px;
@@ -699,12 +717,15 @@ textarea {
         font-size: 20px;
         left: 50px;
     }
+    
+    .contact-intro {
+        padding-top: 50px;
+    }
 }
 
 
 @media only screen and (max-width: 500px) {
 
-    
     .contact-title a {
         font-size: 18px;
     }
@@ -718,4 +739,5 @@ textarea {
         font-size: 20px;
         left: 60px;
     }  
+
 }

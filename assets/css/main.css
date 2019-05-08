@@ -11,13 +11,16 @@ html {
 }
 
 
-.about-page {
+
+
+/*
+#about-page {
     background-image: url(/assets/images/lynn_animoji.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50% auto;
 }
-
+*/
 /* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
@@ -33,6 +36,16 @@ html {
 
 
 /* FONT */
+@font-face {
+    font-family: "Helvetica";
+    src: url(/assets/fonts/Helvetica.ttc);
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url(/assets/fonts/HelveticaNeue.ttc);
+}
+
 @font-face {
     font-family: "Folio Medium";
     src: url(/assets/fonts/Folio_Medium.otf);
@@ -80,7 +93,7 @@ html {
 
 /* LOGO */
 .logo h1 {
-    font-family: "Folio Medium";
+    font-family: "Helvetica";
     font-size: 32px;
     font-weight: bold;
     /*position: fixed;*/
@@ -98,19 +111,23 @@ html {
 }
 
 
+
 .hamburger {
     display: none;
 }
 
 
 .intro p {
-    font-family: "Folio Medium";
-    font-size: 33px;
+    font-family: "Helvetica";
+    font-size: 30px;
     text-align: left;
-    padding-left: 130px;
-    padding-right: 130px;
-    padding-top: 170px;
-    padding-bottom: 0px;
+    font-weight: bold;
+    line-height: 1;
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-top: 250px;
+    padding-bottom: 80px;
+    line-height: 1.1;
     
 }
 
@@ -146,7 +163,7 @@ html {
 }
 
 .navigation a {
-    font-family: "Folio Medium";
+    font-family: "Helvetica";
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -155,6 +172,8 @@ html {
     padding-left: 13px;
     padding-right: 13px;
 }
+
+
 
 
 
@@ -190,7 +209,7 @@ html {
 
 .overlay-content {
     position: relative;
-    top: 30%;
+    top: 40%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -305,8 +324,7 @@ html {
 /* CONTACT FOOTER */
 #contact {
     text-align: center;
-    padding-left: 5px;
-    padding-right: 65px;
+    padding-right: 75px;
     padding-top: 150px;
     
 }
@@ -314,7 +332,8 @@ html {
 
 .contact-title a {
     text-decoration: none;
-    font-family: "Folio Medium";
+    font-family: "Helvetica";
+    font-weight: bold;
     font-size: 20px;
     color: black;
 }
@@ -327,7 +346,7 @@ html {
 
 /* FOOTER */
 .footer {
-    font-family: "Folio Medium";
+    font-family: "Helvetica";
     font-size: 15px;
     font-weight: medium;
     color: black;
@@ -350,7 +369,7 @@ html {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: "Folio Light";
+    font-family: "Helvetica";
     font-size: 15px;
     color: white;
     
@@ -407,14 +426,15 @@ html {
 .contact-intro {
     text-align: center;
     padding-top: 70px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 .contact-intro p {
-    font-family: "Folio Medium";
-    font-size: 20px;
+    font-family: "Helvetica";
+    font-size: 17px;
     padding-top: 50px;
+    line-height: 1.5;
     
 }
 
@@ -426,7 +446,7 @@ html {
 
 .contact-input {
     color: black;
-    font-family: "Folio Medium";
+    font-family: "Helvetica";
     font-size: 15px;
     line-height: 20px;
     background-color: transparent;
@@ -446,7 +466,7 @@ textarea {
 }
 
 [type="submit"] {
-    font-family: "Folio Medium";
+    font-family: "Helvetica";
     width: 50%;
     background: transparent;
     color: black;
@@ -594,13 +614,16 @@ textarea {
 /* RESPONSIVE SETTINGS */
 
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1200px) {
     .contact-intro {
-        padding-left: 70px;
-        padding-right: 70px;
+        padding-left: 150px;
+        padding-right: 150px;
     }
     .intro p {
-        font-size: 30px;
+        font-size: 28px;
+        padding-left: 130px;
+        padding-right: 130px;
+            
     }
     .stagger-left-col {
         width: 100%;
@@ -624,33 +647,19 @@ textarea {
         width: 50%;
     }
     
-    .navigation ul {
-        display: none;
-    }
-    
-    .hamburger {
-        top: 5;
-        right: 0;
-        display: block;
-        position: fixed;
-        color: black;
-        font-size: 25px;
-        padding-top: 15px;
-        padding-right: 20px;
-    }
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .intro p {
-        font-size: 28px;
+        font-size: 25px;
         padding-left: 100px;
         padding-right: 100px;
     }
     
     .contact-intro {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 70px;
+        padding-right: 70px;
     }
 
     .stagger-right-col p {
@@ -664,6 +673,14 @@ textarea {
     }
 }
 
+@media only screen and (max-width: 900px) {
+    .intro p {
+        font-size: 25px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}
 
 @media only screen and (max-width: 700px) {
     .column {
@@ -671,15 +688,16 @@ textarea {
     }
 
     .contact-intro {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     
     .contact-intro p {
-        font-size: 17px;
+        font-size: 15px;
     }
+    
     .intro p {
-        font-size: 28px;
+        font-size: 25px;
         padding-left: 50px;
         padding-right: 50px;
 
@@ -698,14 +716,29 @@ textarea {
         font: 20px;
         left: 70px;
     }
+    
+    .navigation ul {
+        display: none;
+    }
+    
+    .hamburger {
+        top: 5;
+        right: 0;
+        display: block;
+        position: fixed;
+        color: black;
+        font-size: 25px;
+        padding-top: 18px;
+        padding-right: 20px;
+    }
 }
 
 
 @media only screen and (max-width: 600px) {
     .intro p {
-        font-size: 23px;
-        padding-left: 40px;
-        padding-right: 40px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
 
     }
     .stagger-right-col p {
@@ -718,8 +751,22 @@ textarea {
         left: 50px;
     }
     
-    .contact-intro {
-        padding-top: 50px;
+    .contact-title a {
+        font-size: 17px;
+    }
+    
+    .footer { 
+        font-size: 14px;
+    }
+    
+    .contact-intro  {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-right: 10px;
+    }
+    
+    .contact-intro p {
+        font-size: 15px;
     }
 }
 

@@ -1,2 +1,2 @@
 # Thaoly-Ngo's Portfolio Website
-# My first portfolio website build back in 2018, this has been replaced with a Webflow site.
+My first portfolio website build back in 2018, this has been replaced with a Webflow site.
